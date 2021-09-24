@@ -2,11 +2,11 @@
 
 This is a backend tool, that allows you to use the online bank storage.
 
-1. To get the full list of existing in the storage banks send a GET request to endpoint 'api/banks';
+1. To get the full list of existing banks in the storage send a GET request to endpoint 'api/banks';
 
 2. To add your bank send a POST request to endpoint 'api/banks' with a \*body.
   
-3. To delete existing bank send a POST request to endpoint 'api/banks/:bankId/delete'.
+3. To delete an existing bank send a POST request to endpoint 'api/banks/:bankId/delete'.
 
 4. To edit existing bank send a PUT request to endpoint 'api/banks/:bankId' with a \*body.
 
