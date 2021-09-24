@@ -10,6 +10,7 @@ This is a backend tool, that allows you to use the online bank storage.
 
 4. To edit existing bank send a PUT request to endpoint 'api/banks/:bankId' with a \*body.
 
+----------------------------------------------------------------------------------------------------------
 
 \* body, you need to send with the request should have a list of fields:
 - Name of the bank, required, nust be unique. If you sent an empty value or it isn't unique, you'll get an error 400.
