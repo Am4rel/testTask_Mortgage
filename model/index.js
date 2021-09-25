@@ -45,7 +45,14 @@ const bankScheme = Joi.object({
   maximumLoan: Joi.number().min(0).max(100000000).required(),
   minimumDownPayment: Joi.number().min(0).max(1).required(),
   loanTerm: Joi.number().min(0).max(100).required(),
-  calculationHistory: Joi.array(),
+  calculationHistory: Joi.array([
+    Joi.object({
+      initialLoan:  Joi.number(),
+      downPayment: Joi.number(),
+      monthlyPayment: Joi.number(),
+      date: Joi.date(),
+    })
+  ]),
 });
 
 module.exports = {
