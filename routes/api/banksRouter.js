@@ -4,6 +4,8 @@ const router = express.Router()
 
 router.get('/', ctrl.getAllBanks);
 
+router.get('/:bankId', ctrl.getBank);
+
 router.post('/', ctrl.addBank);
 
 router.post('/:bankId/delete', ctrl.deleteBank);
