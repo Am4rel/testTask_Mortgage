@@ -3,8 +3,6 @@ const {Bank} = require("../../model");
 const deleteBank = async (req, res, next) => {
     try {
         const {bankId} = req.params;
-        const {body} = req;
-        const {error} = bankScheme.validate(body);
 
         const bank = await Bank.findById(bankId);
         if (!bank){
