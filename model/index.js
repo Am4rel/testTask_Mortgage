@@ -32,7 +32,8 @@ const bank = mongoose.Schema({
         required: [true, 'Set a term bank gives to return the debt'],
     },
     calculationHistory: {
-      type: Array
+      type: Array,
+      default: [],
     }
 }, {versionKey: false, timestamps: true});
 
