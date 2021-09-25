@@ -31,6 +31,9 @@ const bank = mongoose.Schema({
         max: 100,
         required: [true, 'Set a term bank gives to return the debt'],
     },
+    calculationHistory: {
+      type: Array
+    }
 }, {versionKey: false, timestamps: true});
 
 const Bank = mongoose.model("Bank", bank);
@@ -41,6 +44,7 @@ const bankScheme = Joi.object({
   maximumLoan: Joi.number().min(0).max(100000000).required(),
   minimumDownPayment: Joi.number().min(0).max(1).required(),
   loanTerm: Joi.number().min(0).max(100).required(),
+  calculationHistory: Joi.array(),
 });
 
 module.exports = {
